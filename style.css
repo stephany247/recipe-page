@@ -1,0 +1,214 @@
+* 1. Use a more-intuitive box-sizing model. */ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-80: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  color: var(--Stone-600);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  background-color: var(--White)s;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  /* max-width: 22rem; */
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: var(--Brown-800);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--Stone-900);
+  line-height: 1;
+  margin: 1rem 0 1.5rem;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+b {
+  font-weight: 700;
+}
+
+ol,
+ul {
+  padding: 0 0 0 1.5rem;
+}
+
+li {
+  padding: 0.3rem 0 0.3rem 0.8rem;
+}
+
+li::marker {
+  font-weight: 700;
+  color: var(--Brown-800);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--Stone-150);
+  margin: 1.5rem auto;
+  opacity: 0.7;
+}
+
+.text {
+  padding: 2rem;
+}
+
+.container {
+  background-color: var(--White);
+}
+
+.inner-container {
+  background-color: var(--Rose-50);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin: 2rem 0;
+}
+
+.inner-container h3 {
+  color: var(--Rose-80);
+  margin: 0.3rem 0;
+}
+
+.inner-container li::marker {
+  color: var(--Rose-80);
+  margin: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+tr {
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 0.6rem 2rem;
+}
+
+td:last-child {
+  color: var(--Brown-800);
+  /* padding: 10px 20px; */
+  font-weight: 600;
+  /* padding: 0; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    background-color: var(--Stone-100);
+  }
+
+  .container {
+    width: 710px;
+    border-radius: 20px;
+    margin: 100px auto;
+  }
+ 
+  .image {
+    padding: 2rem 2rem 0;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
