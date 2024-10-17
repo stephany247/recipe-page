@@ -180,9 +180,7 @@ td {
 
 td:last-child {
   color: var(--Brown-800);
-  /* padding: 10px 20px; */
   font-weight: 600;
-  /* padding: 0; */
 }
 
 .attribution {
